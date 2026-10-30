@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+	<style>
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+		.navMenu {
+			font-family: 'Lato', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+		.border { border: 1px solid #cccccc; }
+		.navMenu a:hover { color: #d09c0b; }
+	</style>
+</head>
+<body>
+	<!-- 링크를 바꾸려면 href만 수정하세요. 가로/세로는 아래 direction 값으로 바꿉니다. -->
+	<nav class="navMenu border">
+		<a target="_blank" href="https://www.notion.so/8ed5e5df21f1827aa0d201add34b0d30"><i class="fa-solid fa-house"></i> Home</a>
+		<a target="_blank" href="https://www.notion.so/6c45e5df21f18206bbd881f829848a70"><i class="fa-solid fa-briefcase"></i> Projects</a>
+		<a target="_blank" href="https://www.notion.so/5115e5df21f1832badba817e290d6580"><i class="fa-solid fa-flask"></i> Research Notes</a>
+		<a target="_blank" href="https://www.notion.so/62c5e5df21f1830ca3ed017f7ed09fd8"><i class="fa-solid fa-book"></i> Repository</a>
+		<a target="_blank" href="https://www.notion.so/0355e5df21f183b08270017b238af83f"><i class="fa-solid fa-tags"></i> Keywords</a>
+		<a target="_blank" href="https://www.notion.so/9775e5df21f182c29393811401e33b40"><i class="fa-solid fa-users"></i> Meetings</a>
+		<a target="_blank" href="https://www.notion.so/9ad5e5df21f182bba64501cf6004d5b0"><i class="fa-solid fa-calendar-week"></i> Schedule</a>
+		<a target="_blank" href="https://www.notion.so/3d55e5df21f181ceb261dc49befe758d"><i class="fa-solid fa-list-check"></i> DFC</a>
+		<a target="_blank" href="https://www.notion.so/3d55e5df21f181dca274c76de7ab9dda"><i class="fa-solid fa-database"></i> Databases</a>
+		<a target="_blank" href="https://www.notion.so/2a00a1cddf8f4975bed72400081efb41"><i class="fa-solid fa-box-archive"></i> Archive</a>
+	</nav>
+	<script>
+		let direction = "horizontal"; // "vertical"로 바꾸면 세로 메뉴
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+	</script>
+</body>
+</html>
