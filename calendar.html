@@ -7,8 +7,8 @@
 
     <style>
         body {
-    font-family: monospace;
-
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .wrapper {
@@ -37,7 +37,9 @@ table {
 .month{
     background-color: #000;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.4em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
 }
 .year {
     font-size: 12px;
@@ -222,21 +224,19 @@ function calendar(widget, data)
 
     fila = document.createElement('tr');
 
-    for(var i = 1; i < 7; i++)
+    for(var i = 0; i < 7; i++)
     {
         fila.innerHTML += '<th class="day-header">' + days_abr[i] + '</th>';
     }
-
-    fila.innerHTML += '<th class="day-header">' + days_abr[0] + '</th>';
     e.appendChild(fila);
 
     /* Obtinc el dia que va acabar el mes anterior */
     var inici_mes =
-        new Date(data.getFullYear(), data.getMonth(), -1).getDay();
+        new Date(data.getFullYear(), data.getMonth(), 1).getDay();
 
     var actual = new Date(data.getFullYear(),
 			  data.getMonth(),
-			  -inici_mes);
+			  1 - inici_mes);
 
     /* 6 setmanes per cobrir totes les posiblitats
      *  Quedaria mes consistent alhora de mostrar molts mesos 
